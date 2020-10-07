@@ -1,0 +1,32 @@
+{
+    "$jason": {
+        "head": {
+            "actions": {
+                "handleLink": [
+                    {
+                        "{{#if $jason.url.indexOf('signin') !== -1 }}": {
+                            "type": "$href",
+                            "options": {
+                                "url": "https://datenmoni.de"
+                            }
+                        }
+                    },
+                    {
+                        "{{#else}}": {
+                            "type": "$default"
+                        }
+                    }
+                ]
+            }
+        },
+        "body": {
+            "background": {
+                "type": "html",
+                "url": "https://datenmoni.de",
+                "action": {
+                    "trigger": "handleLink"
+                }
+            }
+        }
+    }
+}

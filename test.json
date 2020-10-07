@@ -7,7 +7,7 @@
                         "{{#if $jason.url.indexOf('signin') !== -1 }}": {
                             "type": "$href",
                             "options": {
-                                "url": "https://www.google.com"
+                                "url": "https://datenmoni.de"
                             }
                         }
                     },
@@ -22,7 +22,7 @@
         "body": {
             "background": {
                 "type": "html",
-                "url": "https://www.google.com",
+                "url": "https://datenmoni.de",
                 "action": {
                     "trigger": "handleLink"
                 }

@@ -2,21 +2,29 @@
     "$jason": {
         "head": {
             "actions": {
-                "displayBanner": {
-                    "type": "$util.banner",
-                    "options": {
-                        "title": "Clicked",
-                        "description": "Link {{$jason.url}} clicked!"
+                "handleLink": [
+                    {
+                        "{{#if $jason.url.indexOf('signin') !== -1 }}": {
+                            "type": "$href",
+                            "options": {
+                                "url": "https://www.google.com"
+                            }
+                        }
+                    },
+                    {
+                        "{{#else}}": {
+                            "type": "$default"
+                        }
                     }
-                }
+                ]
             }
         },
         "body": {
             "background": {
                 "type": "html",
-                "url": "https://datenmoni.de",
+                "url": "https://www.google.com",
                 "action": {
-                    "trigger": "displayBanner"
+                    "trigger": "handleLink"
                 }
             }
         }

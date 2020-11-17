@@ -1,0 +1,32 @@
+{
+    "$jason": {
+        "head": {
+            "actions": {
+                "handleLink": [
+                    {
+                        "{{#if $jason.url.indexOf('signin') !== -1 }}": {
+                            "type": "$href",
+                            "options": {
+                                "url": "https://datenmoni.de/login"
+                            }
+                        }
+                    },
+                    {
+                        "{{#else}}": {
+                            "type": "$default"
+                        }
+                    }
+                ]
+            }
+        },
+        "body": {
+            "background": {
+                "type": "html",
+                "url": "https://datenmoni.de/d/yIF8PtoGz/schule_smart_phone?orgId=4&kiosk=1",
+                "action": {
+                    "trigger": "handleLink"
+                }
+            }
+        }
+    }
+}
